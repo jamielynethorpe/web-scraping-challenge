@@ -57,51 +57,47 @@
               </div>
             </div>
           </div>
-          <!-- Mars Hemispheres rows  -->
-          <!-- <div class="row" style="margin-top:80px;"> -->
-              <!-- <div class="page-header"> -->
-                <h2 style="padding-top: 50px; margin-top: 100px; text-align: center;"> Mars Hemispheres</h2>
-                <div class= "row"
-              <div class= "col-sm-6">
-              <img src= {{mars.mars_hemispheres [0].image_link}}}
-              <h4>{{ mars.mars_hemispheres[0].title}}</h4>
+          <div class="container-fluid">
+            <div class="jumbotron">
+              <h1><i class="fa fa-align-center" aria-hidden="true"></i> Mars Hemispheres</h1>
             </div>
           </div>
-        </div>
+        
           <div class= "row">
-            </div class= "col-sm-6">
-            <img src= {{mars.mars_hemispheres [1]. hemisphere_image_urls}}
-            <h4>{{ mars.mars_hemispheres[1].title}}</h4>
+            <div class = "col-sm-6">
+              <img src={{mars.mars_hemispheres [0].img_url}} height="400" width="400" class="img_responsive"
+              <h4><b>{{mars.mars_hemispheres[0].title}}</b></h4>
+            </div>
+          <div class="col-sm-6">
+            <img src={{mars.mars_hemispheres [1].img_url}} height="400" width="400" class="img_responsive"
+            <h4> <b>{{mars.mars_hemispheres[1].title}}</b></h4>
           </div>
-        </div>
-        <div class= "row">
-          </div class= "col-sm-6">
-          <img src= {{mars.mars_hemispheres [2]. hemisphere_image_urls}}
-            <h4>{{ mars.mars_hemispheres[2].title}}</h4>
-        </div>
-    </div class= "col-sm-6">
-    <img src= {{mars.mars_hemispheres [3]. hemisphere_image_urls}}
-            <h4>{{ mars.mars_hemispheres[3].title}}</h4>
           </div>
+          <div class="container"> </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <img src={{mars.mars_hemispheres [2].img_url}} height="400" width="400" class="img_responsive"
+              <h4><b>{{mars.mars_hemispheres[2].title}}</b></h4>
+            </div>
+            <div class= "col-sm-6">
+            <!-- </div> -->
+            <img src={{mars.mars_hemispheres [3].img_url}} height= "400" width= "400" class= "img_responsive"
+            <h4><b>{{mars.mars_hemispheres[3].title}}</b></h4>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
-              <!-- Mars Hemisphers data -->
-              <!-- {% for hemisphere in mars.hemispheres %}
-              <div class="col-md-6">
-                  <div class="card" style="width: 20rem;">
-                   <!-- <div class="card-body"> -->
-                  <!-- <div class="thumbnail"> -->
-                   <!-- <img src="{{hemisphere_image_urls}}"/> -->
-                  <!-- <div class="caption"> -->
-                      <!-- <h3><b>{{hemisphere.title}}</b></h3>
-                  <!-- </div> -->
-                  <!-- </div> -->
-              <!-- </div> --> --> -->
-            {% endfor %}
-      
-          </div>
-        </div>
+    </div>
+    </div>
+  
+    </div>
+                
+
+
+  
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
