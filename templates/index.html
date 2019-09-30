@@ -1,107 +1,123 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Missions to Mars </title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body>
-   <div class="jumbotron text-center">
-       <h1 class="display-3">Mission to Mars</h1>
-       
-       <p class="lead">
-           <a class="btn btn-primary btn-lg" href="/scrape" role="button">Mission to Scrape Mars</a></p>
-   </div>   
-   <!-- Latest Mars News Section  -->
-   <div class="row">
+<head>
+  <title>Missions to Mars </title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="jumbotron text-center">
+    <h1 class="display-3">Mission to Mars</h1>
+
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="/scrape" role="button">Mission to Scrape Mars</a></p>
+  </div>
+  <!-- Latest Mars News Section  -->
+  <div class="container">
+
+    <div class="row">
       <div class="col-md-12">
-      <div class="media">
-        <div class="media-body">
-           <h2><b>Latest Mars News</b></h2>
-           <h4 class="heading">{{mars.mars_news.news_title}}</h4>
-           <p>{{mars.mars_news.news_paragraph}}</p>
-         </div>
-       </div>
-     </div>
-   </div>
-    <!-- Next div is a row, divided into two sections-->
-    <div class="row"style=""margin-top:25px;"">
-      <!-- First section is for the featured Mars Image -->
-      <div class="col-md-8">
-         <h2>Featured Mars Image</h2> 
-         <img src="{{mars.mars_featured_image.featured_img_url}}" height= "600" width="750" class="img-responsive">
-      </div>
-      <!-- Current Mars Weather and Facts -->
-      <div class="col-md-3">
-      <!-- Mars Weather Tweet Row -->
-      <div class="row">
-          <div class="col-md-15">
-              <div class="panel panel-default">
-                  <div class="panel-body">
-                      <h4><b>Current Weather on Mars</b></h4>
-                      <p>{{mars.mars_tweet.mars_weather}}</p>
-                    </div>
-                </div>
-            </div>
+        <div class="media">
+          <div class="media-body">
+            <h2><b>Latest Mars News</b></h2>
+            <h4 class="heading">{{mars.mars_news.news_title}}</h4>
+            <p>{{mars.mars_news.news_paragraph}}</p>
           </div>
-          <!-- Mars Facts Rows -->
-          <div class="row">
-              <div class="col-md-20">
-                  <h4><b>Mars Facts</b></h4>   
-                  {{mars.mars_facts|safe}}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container-fluid">
-            <div class="jumbotron">
-              <h1><i class="fa fa-align-center" aria-hidden="true"></i> Mars Hemispheres</h1>
-            </div>
-          </div>
-        
-          <div class= "row">
-            <div class = "col-sm-6">
-              <img src={{mars.mars_hemispheres [0].img_url}} height="400" width="400" class="img_responsive"
-              <h4><b>{{mars.mars_hemispheres[0].title}}</b></h4>
-            </div>
-          <div class="col-sm-6">
-            <img src={{mars.mars_hemispheres [1].img_url}} height="400" width="400" class="img_responsive"
-            <h4> <b>{{mars.mars_hemispheres[1].title}}</b></h4>
-          </div>
-          </div>
-          <div class="container"> </div>
-
-          <div class="row">
-            <div class="col-sm-6">
-              <img src={{mars.mars_hemispheres [2].img_url}} height="400" width="400" class="img_responsive"
-              <h4><b>{{mars.mars_hemispheres[2].title}}</b></h4>
-            </div>
-            <div class= "col-sm-6">
-            <!-- </div> -->
-            <img src={{mars.mars_hemispheres [3].img_url}} height= "400" width= "400" class= "img_responsive"
-            <h4><b>{{mars.mars_hemispheres[3].title}}</b></h4>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
+    <!-- Next div is a row, divided into two sections-->
+    <div class="row" style="" margin-top:25px;"">
+      <!-- First section is for the featured Mars Image -->
+      <div class="col-md-8">
+        <h2>Featured Mars Image</h2>
+        <img src="{{mars.mars_featured_image.featured_img_url}}" height="600" width="750" class="img-responsive">
+      </div>
+      
+      <!-- Current Mars Weather and Facts -->
+      <div class="col-md-3">
+        <!-- Mars Weather Tweet Row -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h4><b>Current Weather on Mars</b></h4>
+                <p>{{mars.mars_tweet.mars_weather}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Mars Facts Rows -->
+        <div class="row">
+          <div class="col-md-12">
+            <h4><b>Mars Facts</b></h4>
+            {{mars.mars_facts|safe}}
+          </div>
+        </div>
+      </div>
     </div>
+    <br>
+    <div class="container-fluid">
+      <div class="jumbotron">
+        <h1><i class="fa fa-align-center" aria-hidden="true"></i> Mars Hemispheres</h1>
+      </div>
     </div>
-  
+
+    <div class="row">
+      <div class="col-sm-6">
+        <img src={{mars.mars_hemispheres [0].img_url}} height="400" width="400" class="img_responsive"
+          <h4><b>{{mars.mars_hemispheres[0].title}}</b></h4>
+      </div>
+      <div class="col-sm-6">
+        <img src={{mars.mars_hemispheres [1].img_url}} height="400" width="400" class="img_responsive" <h4>
+        <b>{{mars.mars_hemispheres[1].title}}</b></h4>
+      </div>
     </div>
-                
+    <br>
+    <div class="container"> </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <img src={{mars.mars_hemispheres [2].img_url}} height="400" width="400" class="img_responsive"
+          <h4><b>{{mars.mars_hemispheres[2].title}}</b></h4>
+      </div>
+      <div class="col-sm-6">
+        <!-- </div> -->
+        <img src={{mars.mars_hemispheres [3].img_url}} height="400" width="400" class="img_responsive"
+          <h4><b>{{mars.mars_hemispheres[3].title}}</b></h4>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  </div>
+
+  </div>
 
 
-  
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
